@@ -15,7 +15,8 @@
                 "bootstrap-plain.svg"
             ],
             "stack": "FullStack",
-            "image": "Chess-rg.jpg"
+            "image": "Chess-rg.jpg",
+            "ghLink": "https://github.com/SiyaRG/Chessrg.git"
         },
         "tictactoe": {
             "id": 2,
@@ -31,7 +32,8 @@
                 "reactbootstrap-original.svg"
             ],
             "stack": "FrontEnd",
-            "image": "TTT-rg.jpg"
+            "image": "TTT-rg.jpg",
+            "ghLink": "https://github.com/SiyaRG/TicTacToe-rg.git"
         },
 
         "traversalVisualiser": {
@@ -49,7 +51,8 @@
                 "json-plain.svg"
             ],
             "stack": "FrontEnd",
-            "image": "trav-rg.jpg"
+            "image": "trav-rg.jpg",
+            "ghLink": "https://github.com/SiyaRG/TraversalVisualiserrg.git"
         },
         "datingapp": {
             "id": 4,
@@ -66,7 +69,8 @@
                 "json-plain.svg"
             ],
             "stack": "FullStack",
-            "image": "Coming-soon.jpg"
+            "image": "Coming-soon.jpg",
+            "ghLink": "https://github.com/SiyaRG/Portfolio"
         },
         "portfolio": {
             "id": 5,
@@ -87,7 +91,8 @@
                 "json-plain.svg"
             ],
             "stack": "FullStack",
-            "image": "Coming-soon.jpg"
+            "image": "Coming-soon.jpg",
+            "ghLink": "https://github.com/SiyaRG/Portfolio"
         }
     }
 }

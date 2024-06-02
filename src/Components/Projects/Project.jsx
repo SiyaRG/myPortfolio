@@ -30,7 +30,7 @@ const Project = ({ project }) => {
                             id="btnGit"
                             className="btn"
                             onClick={() => {
-                                window.location.href = "https://github.com/SiyaRG";
+                                window.location.href= project.ghLink
                             }}
                         ></Button>
                     </Card.Body>
