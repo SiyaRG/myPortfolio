@@ -74,7 +74,7 @@ const Contact = () => {
     return (
         <Container
             fluid
-            className="justify-content-center bg-body-secondary h-100"
+            className="justify-content-center bg-body-secondary contact"
         >
             <Row>
                 <Col>

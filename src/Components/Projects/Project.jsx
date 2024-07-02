@@ -9,10 +9,10 @@ const Project = ({ project }) => {
     });
 
     return (
-        <Col className="d-flex justify-content-around mt-3">
+        <Col className="d-flex justify-content-around mt-3 ">
             <Container
                 fluid
-                className="d-flex align-items-center justify-content-around  mb-3 border-success"
+                className="d-flex align-items-center justify-content-around  mb-3 border-success project"
             >
                 <Card
                     className="card"
@@ -30,7 +30,7 @@ const Project = ({ project }) => {
                             id="btnGit"
                             className="btn"
                             onClick={() => {
-                                window.location.href= project.ghLink
+                                window.location.href = project.ghLink;
                             }}
                         ></Button>
                     </Card.Body>

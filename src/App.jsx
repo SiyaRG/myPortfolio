@@ -21,38 +21,38 @@ import Contact from "./Components/Contact Me/Contact.jsx";
 
 //App
 const App = () => {
-	const [view, setView] = useState("Home");
-	useEffect(() => {}, [view]);
+    const [view, setView] = useState("Home");
+    useEffect(() => {}, [view]);
 
-	const toggleView = changeTo => {
-		setView(changeTo);
-	};
-	return (
-		<Container
-			id="container"
-			fluid
-			data-bs-theme="dark"
-			className="min-vh-100 min-vw-100"
-		>
-			<MainNav toggle={toggleView} />
+    const toggleView = changeTo => {
+        setView(changeTo);
+    };
+    return (
+        <Container
+            id="container"
+            fluid
+            data-bs-theme="dark"
+            className="min-vh-100 min-vw-100 p-0 m-0"
+        >
+            <MainNav toggle={toggleView} />
 
-			{(() => {
-				switch (view) {
-					case "Home":
-						return <Home />;
-					case "About":
-						return <About />;
-					case "Projects":
-						return <Projects />;
-					case "Contact":
-						return <Contact />;
-					default:
-						return null;
-				}
-			})()}
-			<GlobalFooter />
-		</Container>
-	);
+            {(() => {
+                switch (view) {
+                    case "Home":
+                        return <Home />;
+                    case "About":
+                        return <About />;
+                    case "Projects":
+                        return <Projects />;
+                    case "Contact":
+                        return <Contact />;
+                    default:
+                        return null;
+                }
+            })()}
+
+        </Container>
+    );
 };
 
 export default App;

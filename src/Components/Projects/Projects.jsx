@@ -6,15 +6,10 @@ import Project from "./Project.jsx";
 const Projects = () => {
     const [filter, setFilter] = useState("All");
     const [count, setCount] = useState(0);
-    useEffect(() => {
-        
-    }, [filter]);
+    useEffect(() => {}, [filter]);
 
     return (
-        <Container
-            fluid
-            className="text-center bg-body-secondary overflow-scroll min-vh-100"
-        >
+        <Container fluid className="text-center bg-body-secondary projects">
             <Row className="mb-2">
                 <Col>
                     <h1 className="mt-3 text-light-emphasis">Projects</h1>
@@ -79,13 +74,14 @@ const Projects = () => {
                             ).filter(project => {
                                 return project.stack === filter;
                             });
+                            if(filteredProjects.length === 0){
+                              return <h2>Oops... Coming soon!</h2>;
+                            }
                             return filteredProjects.map(project => {
                                 return <Project project={project} />;
                             });
                         }
-                        if (count === 0) {
-                            return <h2>Oops... Coming soon!</h2>;
-                        }
+                        
                     })()}
                 </Row>
             </Row>
