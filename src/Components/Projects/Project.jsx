@@ -5,7 +5,7 @@ const Project = ({ project }) => {
     const aboutImage = require(`../../Resources/Images/${project.image}`);
     const technologies = project.icons.map(technology => {
         const i = require(`../../Resources/Icons/${technology}`);
-        return <img className="tech" href="#" src={i} />;
+        return <img className="tech" href="#" src={i} alt="404" />;
     });
 
     return (

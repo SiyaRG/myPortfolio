@@ -5,11 +5,11 @@ import Project from "./Project.jsx";
 
 const Projects = () => {
     const [filter, setFilter] = useState("All");
-    const [count, setCount] = useState(0);
+    
     useEffect(() => {}, [filter]);
 
     return (
-        <Container fluid className="text-center bg-body-secondary projects">
+        <Container fluid className="text-center bg-body-secondary view projects">
             <Row className="mb-2">
                 <Col>
                     <h1 className="mt-3 text-light-emphasis">Projects</h1>

@@ -1,6 +1,6 @@
 import React from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
-import { useState, useEffect } from "react";
+import { Container, Row, Col } from "react-bootstrap";
+
 import AboutCard from "./AboutCard.jsx";
 import roles from "./About.json";
 
@@ -10,7 +10,7 @@ const About = () => {
     });
 
     return (
-        <Container fluid className="text-center bg-body-secondary about">
+        <Container fluid className="text-center bg-body-secondary view about">
             <Row id="cardScroller" className="d-flex position-absolute">
                 {" "}
                 <button
@@ -33,10 +33,11 @@ const About = () => {
             </Row>
             <Row className="d-flex p-2 justify-content-center">
                 <p id="aboutme">
-                    Versatile self-taught developer with over half a decade of experience. Passionate about problem-solving
-                    and creating efficient, user-centric solutions. Seeking
-                    opportunities to apply my diverse skill set and contribute
-                    to impactful projects.
+                    Versatile self-taught developer with over half a decade of
+                    experience. Passionate about problem-solving and creating
+                    efficient, user-centric solutions. Seeking opportunities to
+                    apply my diverse skill set and contribute to impactful
+                    projects.
                 </p>
             </Row>
             <Row

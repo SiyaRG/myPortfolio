@@ -16,37 +16,30 @@
 .col-accent {
     color: var(--accent);
 }
-.home {
+.view {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+.home {
     background-image: url("Resources/Images/P2.jpg");
 }
 .about {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     background-image: url("Resources/Images/P3.jpg");
-    overflow-x: hidden;
 }
 .projects {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     background-image: url("Resources/Images/P4.jpg");
-    overflow: scroll;
-    min-height: 100vh;
 }
 .project {
     animation: fadeIn 1s ease forwards;
 }
 .contact {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     background-image: url("Resources/Images/P1.jpg");
-    overflow: hidden;
-    height: 100%;
 }
 .siya {
     font: bold;

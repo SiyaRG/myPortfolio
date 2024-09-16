@@ -10,6 +10,8 @@ import {
 } from "react-bootstrap";
 import OutputModal from "./OutputModal.jsx";
 import Spinner from "../../Resources/Spinners/Spinner.jsx";
+
+const { sendEmail } = require("./sendEmail.js");
 const Contact = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -24,28 +26,22 @@ const Contact = () => {
 
     const handleSubmit = async e => {
         setLoading(true);
-        const feedback = { name, email, comment };
+
         try {
-            const response = await fetch(
-                "https://fpsk2drwyaen6updwychxatk7q0dxllk.lambda-url.eu-north-1.on.aws/api/feedbacks/66",
-                {
-                    method: "POST",
-                    body: JSON.stringify(feedback),
-                    headers: {
-                        "Content-Type": "application/json"
-                    }
-                }
+            const par = {
+                from_name: name,
+                message: comment,
+                email: email
+            };
+
+            await sendEmail(
+                "service_1lx07tb",
+                "template_vrl35gp",
+                "xWbGbrbqyDgwR6vgU",
+                par
             );
-
-            const res = response.json();
-
-            if (!response.ok) {
-                setError(res.error);
-            } else {
-                setError(null);
-            }
         } catch (error) {
-            setError(error);
+            console.log(error.message);
         }
         setLoading(false);
         let i = document.getElementById("name");
@@ -74,7 +70,7 @@ const Contact = () => {
     return (
         <Container
             fluid
-            className="justify-content-center bg-body-secondary contact"
+            className="justify-content-center bg-body-secondary view contact"
         >
             <Row>
                 <Col>
@@ -108,7 +104,7 @@ const Contact = () => {
                                         e.target.classList.remove("is-invalid");
                                     }}
                                     onBlur={e => {
-                                        if (e.target.value == "") {
+                                        if (e.target.value === "") {
                                             e.target.classList.add(
                                                 "is-invalid"
                                             );

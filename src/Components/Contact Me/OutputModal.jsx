@@ -1,24 +1,8 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment } from "react";
 import { Modal, Button } from "react-bootstrap";
 const OutputModal = ({ show, handleClose, error, loading }) => {
-    const Body = () => {
-        if (error === null) {
-            return (
-                <Modal.Body>
-                    <p>
-                        Your feedback has been successfully receiced. Thank you
-                        for getting in touch!
-                    </p>
-                </Modal.Body>
-            );
-        } else {
-            return (
-                <Modal.Body>
-                    <p>Oops!! {error.message}</p>
-                </Modal.Body>
-            );
-        }
-    };
+    
+    
 
     return (
         <Fragment>
@@ -41,12 +25,13 @@ const OutputModal = ({ show, handleClose, error, loading }) => {
                 <Modal.Body>
                     <p>
                         {(() => {
-                            if (error !== null) {
-                            }
-                            return error !== null
-                                ? error.message
-                                : `Thank you for getting in touch.\n
+                            if (error === null) {
+                                return `Thank you for getting in touch.\n
 								I look forward to your comment!`;
+                            }
+                            return typeof error === "string"
+                                ? error
+                                : typeof error;
                         })()}
                     </p>
                 </Modal.Body>

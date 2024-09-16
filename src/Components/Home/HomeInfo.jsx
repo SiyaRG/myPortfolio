@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Nav, Col } from "react-bootstrap";
+import { Container, Row, Nav } from "react-bootstrap";
 
 const HomeInfo = () => {
     return (

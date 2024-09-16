@@ -1,7 +1,6 @@
-import { Container, Row, Col } from "react-bootstrap";
-import siyaPic from "../../Resources/Images/siya.jpg";
+import { Container } from "react-bootstrap";
 const HomeImage = () => {
-	return <Container id="imageBox" className="border-black"></Container>;
+    return <Container id="imageBox" className="border-black"></Container>;
 };
 
 export default HomeImage;

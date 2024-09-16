@@ -5,7 +5,7 @@ const AboutCard = ({ card }) => {
     const aboutImage = require(`../../Resources/Images/${card.image}`);
     const technologies = card.technologies.map(technology => {
         const i = require(`../../Resources/Icons/${technology}`);
-        return <img className="tech" href="#" src={i} />;
+        return <img className="tech" href="#" src={i} alt ="404"/>;
     });
 
     return (

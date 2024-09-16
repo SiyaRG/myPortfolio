@@ -2,11 +2,11 @@ import React from "react";
 import HomeImage from "./HomeImage.jsx";
 import HomeInfo from "./HomeInfo.jsx";
 
-import { Container, Row, Col, Button, Navbar, Nav } from "react-bootstrap";
+import { Container, Row, Col, Button} from "react-bootstrap";
 
 const Home = () => {
     return (
-        <Container fluid className="text-center bg-body-secondary home">
+        <Container fluid className="text-center bg-body-secondary view home">
             <Row className="mb-5">
                 <Col>
                     <h1 className="mt-3 text-light-emphasis">Home</h1>
