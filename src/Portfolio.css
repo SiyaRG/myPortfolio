@@ -1,348 +1,170 @@
+/* src/index.css */
+
 :root {
-    box-sizing: border-box;
-    --accent: #11dfef;
+  box-sizing: border-box;
+  padding: 0;
+  --accent: #3390e7;
 }
 @font-face {
-    font-family: portfolioFont;
-    src: url("Resources/Fonts/leaguespartan-bold.ttf");
+  font-family: siyaFont;
+  src: url("/fonts/techno-race-italic-font/TechnoRaceItalic-eZRWe.otf");
 }
-.b-accent {
-    background-color: var(--accent);
-}
-.br-accent {
-    border-color: var(--accent);
-}
-
-.col-accent {
-    color: var(--accent);
-}
-.view {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow: hidden;
-}
-.home {
-    background-image: url("Resources/Images/P2.jpg");
-}
-.about {
-    background-image: url("Resources/Images/P3.jpg");
-}
-.projects {
-    background-image: url("Resources/Images/P4.jpg");
-}
-.project {
-    animation: fadeIn 1s ease forwards;
-}
-.contact {
-    background-image: url("Resources/Images/P1.jpg");
-}
-.siya {
-    font: bold;
-    text-shadow: 0 0 0.05rem var(-accent);
-}
-* {
-    box-sizing: inherit;
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 body {
-    padding: 0;
-    height: 100vh;
-    width: 100vw;
-    margin: 0;
-    background-color: pink;
-    max-width: 100vw;
-    font-family: portfolioFont;
-    overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: #000;
 }
-#container {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    font-family: portfolioFont;
-}
-body > * {
-    margin-left: 0;
-    margin-right: 0;
+#content {
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+
+  overflow-y: scroll;
+  scrollbar-width: 1px;
+  scrollbar-color: white;
+  overflow-x: hidden;
 }
 
-h1 {
-    font-family: portfolioFont;
-    animation: fadeInUp 1s;
+nav {
+  margin-bottom: 0.5rem;
+  width: 90vw;
+  display: flex;
+  justify-content: center;
 }
-p {
-    color: white;
+nav > ul {
+  width: 80%;
+  justify-content: space-around;
+}
+li {
+  list-style: none;
 }
 
+header,
+.greet ~ h2,
+.greet ~ div {
+  opacity: 0;
+}
+
+h1,
+.greet ~ h2,
+.greet ~ div {
+  color: aliceblue;
+  align-self: center;
+}
 h2 {
-    animation: fadeInLeft 0.5s;
+  color: aliceblue;
 }
-#subCol {
+
+header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 1px solid white;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 20vh;
+  top: 0;
+  z-index: 2;
+  background-color: #000000cc;
+}
+.sec {
+  min-height: 80vh;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.sec > div > div {
+  margin: 2px;
+}
+
+.webDev {
+  color: var(--accent);
+}
+.info {
+  height: 15rem;
+  width: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.info > button {
+  margin-top: auto;
+  max-width: 12rem;
+}
+.info > div {
+  display: flex;
+  justify-content: space-around;
+  width: 10rem;
+}
+.info > div > img {
+  max-width: 2rem;
+  max-height: 2rem;
+  background-color: var(--accent);
+  border-radius: 10%;
+}
+
+#cv {
+  background-color: var(--accent);
+
+  transform: translateY(40rem);
+}
+.siyaImage {
+  width: 20rem;
+  height: 20rem;
+  background-image: url("/images/siya(no-back)-2.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  border-bottom: 0.24em var(--accent) solid;
+}
+.cover {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+#main > * {
+  scroll-snap-align: start;
+}
+
+@media (max-width: 768px) {
+  #aboutInfo,
+  #imgDiv {
     display: flex;
     flex-direction: column;
-    width: 100%;
     align-items: center;
-}
-
-#imgCol {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.2rem;
-}
-span {
-    color: var(--accent);
-    animation: fadeIn 2s;
-}
-#imageBox {
-    border-style: solid;
-    border-radius: 0.5rem;
-    border-width: 0.2rem;
-    background-image: url("Resources/Images/siya.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 0;
-    margin: auto;
-    height: 12rem;
-    width: 12rem;
-    z-index: 99;
-    animation: fadeIn 1.5s;
-}
-#Image {
-    height: 100%;
-    width: 100%;
-}
-
-#linkNav {
-    display: flex;
-    justify-content: space-around;
-    padding: 0;
-}
-#LinkedIn,
-#GitHub,
-#HackerRank,
-#btnGit {
-    height: 2rem;
-    width: 2rem;
-    margin: 0.6rem 1.2rem;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: rgb(17, 223, 239, 0.1);
-    border-radius: 0.3rem;
-    border: 0.05rem solid var(--accent);
-    box-shadow: 0 0 0.1rem var(--accent);
-    animation: flip 0.5s;
-}
-
-#LinkedIn {
-    background-image: url("Resources/Icons/linkedin-plain.svg");
-    animation-delay: 0.05s;
-}
-
-#GitHub {
-    background-image: url("Resources/Icons/github-original.svg");
-    animation-delay: 0.15s;
-}
-#GitHub:active {
-    transform: scale(1.05) rotateY(45deg);
-}
-#HackerRank {
-    background-image: url("Resources/Icons/hackerrank-4.svg");
-    animation-delay: 0.25s;
-}
-
-#downloadCV,
-#contactSubmit {
-    font-size: 0.8rem;
-    width: 8rem;
-    height: 3.5rem;
-
-    opacity: 0;
-    animation:
-        bounce 1s ease-out,
-        fadeIn 0.45s 0.45s forwards,
-        pulse 2s 1.5s ease-in-out infinite;
-    background-color: var(--accent);
-}
-.Btn {
-    box-shadow: 0 0 0.5rem var(--accent);
-}
-#downloadCV:hover {
-    transform: pulse(1.05);
-    background-color: rgb(40, 145, 167);
-    color: black;
-    animation: none;
-    opacity: 1;
-}
-
-@keyframes fade-in {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-.tech {
-    height: 1.5rem;
-    width: 1.5rem;
-    margin: 0.3rem 0.6rem;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: #f1fdfed1;
-    border-radius: 0.2rem;
-    box-shadow: 0 0 0.1rem #09d7f1;
-}
-.tech:hover {
-    animation: flip 1s linear;
-    box-shadow: 0 0 0.5rem #09d7f1;
-    background-color: rgba(66, 214, 246, 0.868);
-}
-#btnGit {
-    background-image: url("Resources/Icons/github-original.svg");
-    margin-top: auto;
-    margin-bottom: 2rem;
-}
-#btnGit:active {
-    transform: scale(1.05) rotateY(45deg);
-}
-#ddbStack {
-    height: 2.5rem;
-    width: 7rem;
-    background-color: var(--accent);
-}
-#ddbStack:hover {
-    transform: pulse(1.05);
-    background-color: rgb(40, 145, 167);
-    color: black;
-    animation: none;
-    opacity: 1;
-}
-#aboutme {
-    max-width: 20rem;
-    margin: 2rem 0rem;
-    font-size: 1.2rem;
-    animation: glitch 0.5s;
-}
-@keyframes glitch {
-    0% {
-        opacity: 0;
-    }
-    5% {
-        opacity: 1;
-    }
-    25% {
-        opacity: 0.95;
-    }
-    30% {
-        opacity: 0.1;
-    }
-    70% {
-        opacity: 0.2;
-    }
-    75% {
-        opacity: 0.8;
-    }
-    90% {
-        opacity: 0.75;
-    }
-    95% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-.card {
-    box-shadow: 0 0 0.5rem black;
-}
-.card:hover {
-    animation: cardHover 0.5s forwards;
-}
-
-@keyframes cardHover {
-    from {
-    }
-    to {
-        transform: scale(1.05);
-        box-shadow: 0 0 0.5rem var(--accent);
-    }
-}
-
-#cardScroller {
-    z-index: 999;
-    top: 110%;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    max-width: 100vw;
-}
-#cardList {
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-}
-#cardList > * {
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
-}
-#btnLeft,
-#btnRight {
-    height: 6rem;
-    width: 3rem;
-    background-color: rgba(0, 0, 0, 0);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    margin: 0;
-    border: none;
-    opacity: 0.5;
-    animation: pulse 2s linear infinite;
-}
-#btnLeft:hover,
-#btnRight:hover {
-    animation: hoverTog 1s linear;
-}
-@keyframes hoverTog {
-    from {
-    }
-    50% {
-        opacity: 1;
-    }
-    to {
-    }
-}
-#btnLeft {
-    background-image: url("Resources/Images/left-arrow-svgrepo-com.svg");
-    margin-left: 0.5rem;
-    width: 3.5rem;
-}
-#btnRight {
-    background-image: url("Resources/Images/right-arrow-svgrepo-com.svg");
-    margin-left: auto;
-    margin-right: 1rem;
-}
-
-#contactSubmit:hover {
-    transform: pulse(1.07);
-    background-color: rgb(40, 145, 167);
-    color: black;
-}
-#contactSubmit:active {
-    animation: tada 1s linear;
-    opacity: 1;
-}
-#contactSubmit:disabled {
-    animation: none;
-    background-color: rgba(97, 97, 97, 0.868);
-    color: rgba(253, 253, 253, 0.214);
-    opacity: 1;
-}
-#out {
-    font-family: portfolioFont;
-    color: white;
+    text-align: center;
+  }
+  #About > div > img {
+    max-width: 60vw;
+    max-height: 60vw;
+  }
+  #exGrid {
+    grid-template-columns: none;
+    grid-template-rows: repeat(4, minmax(0, 1fr));
+    min-height: 80%;
+    width: 80%;
+  }
+  #1,
+  #2,
+  #3,
+  #4 {
+    height: 20%;
+  }
 }
