@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
+import siyaRG from "../images/SiyaRG.png";
 const Pageload = () => {
   return (
     <motion.div className="flex flex-col items-center justify-center w-screen h-screen">
       <motion.img
         style={{ width: "30vw", height: "30vw" }}
-        src="/SiyaRG.png"
+        src={siyaRG}
         initial={{ scale: 1, opacity: 0.2 }}
         animate={{
           scale: 0.9,

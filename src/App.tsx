@@ -1,21 +1,19 @@
-import "animate.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
 import Pageload from "./Components/Pageload.tsx";
 
 import "./Portfolio.css";
-
+import siyaImage from "./images/siya(no-back)-2.png";
 import About from "./Components/About/About.tsx";
 import Experience from "./Components/Experience/Experience.tsx";
 import Projects from "./Components/Projects/Projects.tsx";
 import Contact from "./Components/Contact/Contact.tsx";
 import { motion, useScroll, useTransform } from "framer-motion";
-import React, { useRef, Suspense } from "react";
+import React, { Suspense } from "react";
 
 const Home = React.lazy(() => import("./Components/Home/Home.tsx"));
 const App = () => {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({ container: ref });
+  const { scrollYProgress } = useScroll();
 
   const background = useTransform(
     scrollYProgress,
@@ -31,21 +29,32 @@ const App = () => {
   return (
     <>
       <motion.div
-        ref={ref}
         id="main"
         style={{
           background: background,
           scrollSnapType: "y mandatory",
           overflowX: "hidden",
           overflowY: "auto",
-          maxHeight: "100vh",
+
           maxWidth: "100vw",
         }}
       >
+        <motion.header className="w-[100vw] h-[20vh] flex p-10 px-14 sticky">
+          <motion.div className="flex items-center">
+            <motion.img
+              className="w-16 h-16 rounded-full bg-slate-100 m-2"
+              src={siyaImage}
+            />
+            <motion.h1 style={{ fontSize: "1.8rem" }} className="text-gray-400">
+              SIYABONGA SOKO
+            </motion.h1>
+          </motion.div>
+          <motion.div></motion.div>
+        </motion.header>
         <Suspense fallback={<Pageload />}>
           <Home />
         </Suspense>
-        <About params={{ scrollProgress: scrollYProgress }} />
+        <About />
         <Experience />
         <Projects />
         <Contact />

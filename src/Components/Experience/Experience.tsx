@@ -23,7 +23,7 @@ const Experience = () => {
       style={{ height: "100vh" }}
       className="flex flex-col justify-center items-center"
     >
-      <motion.h1>Journey Summary</motion.h1>
+      <motion.h1>Tech Stack</motion.h1>
       <motion.div
         id="exGrid"
         variants={cardVariants}
